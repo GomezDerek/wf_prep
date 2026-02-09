@@ -12,7 +12,7 @@ export default [
         //child routes
         index("routes/dashboard-home.tsx"), // renders into the dashboard.tsx Outlet at /dashboard
         route("settings", "routes/settings.tsx")
-    ])
+    ]),
 
     // This usage of `prefix`...
     // prefix("parent", [
@@ -25,5 +25,22 @@ export default [
     //   route("parent/child1", "./child1.tsx"),
     //   route("parent/child2", "./child2.tsx"),
     // ]
+
+    // optional segments
+    // you can make a route segment optional by adding a ? to the end of the segment
+    // route(":lang?/categories", "routes/categories.tsx"),
+
+    // you can have optional static segments, too
+    // route("users/:userId/edit?", "routes/user.tsx"),
+
+    // component routes (descendant routes)
+    route("wizard/*", "routes/componentRoutes.tsx"),
+
+    // splats
+    route("files/*", "routes/files.tsx"),
+
+    // You can also use a splat to catch requests that don't match any route:
+    route("*", "routes/catchall.tsx"), // catchall route
+    
 
 ] satisfies RouteConfig;
