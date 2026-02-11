@@ -1,11 +1,23 @@
+import { Routes, Route } from 'react-router';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APITester } from "./APITester";
+import Page1 from '@/routes/page1';
 import "./index.css";
 
 import logo from "./logo.svg";
 import reactLogo from "./react.svg";
 
+
 export function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/page1" element={<Page1 />} />
+    </Routes>
+  )
+}
+
+export function HomePage() {
   return (
     <div className="container mx-auto p-8 text-center relative z-10">
       <div className="flex justify-center items-center gap-8 mb-8">

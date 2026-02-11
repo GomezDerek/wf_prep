@@ -6,6 +6,7 @@ const server = serve({
     // Serve index.html for all unmatched routes.
     "/*": index,
 
+    // API requests
     "/api/hello": {
       async GET(req) {
         return Response.json({
