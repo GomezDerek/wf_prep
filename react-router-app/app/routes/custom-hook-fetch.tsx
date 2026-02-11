@@ -12,31 +12,34 @@ export default function CustomHookFetchRoute() {
     }
 
     return (
-        <div 
-            style={{
-                display: 'flex', 
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '1rem',
-                margin: '1rem',
-                padding: '1rem',
-                height: 'calc(100vh - 2rem)',
-                backgroundColor: '#333',
-            }}
+        <div
+            className="
+                flex flex-col
+                items-center
+                gap-4
+                m-4
+                p-4
+                h-[calc(100vh-2rem)]
+                bg-gray-700
+            "
         >
             <button 
-                style={{
-                    backgroundColor: 'white',
-                    color: 'black',
-                    padding: '0.2rem 0.6rem',
-                }}
+                className="
+                    bg-white 
+                    text-black 
+                    py-1 
+                    px-2.5
+                    rounded-md
+                    hover:bg-gray-300 
+                    transition-colors 
+                "
                 onClick={handleClick}
             >
                 Get New Dog Fact
             </button>
             <br />
             <p>Dog fact:</p>
-            <p>{funFact}</p>
+            <p className="text-center">{funFact}</p>
         </div>
   )
 }
