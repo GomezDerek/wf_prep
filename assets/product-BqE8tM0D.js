@@ -1,0 +1,1 @@
+import{w as n,p as t}from"./chunk-EPOLDU6W-BovR89Y_.js";function s({params:o}){return o}const c=n(function({loaderData:r}){return t.jsxs("ul",{children:[t.jsxs("li",{children:["Category: ",r.categoryId]}),t.jsxs("li",{children:["Product Id: ",r.productId]})]})});export{s as clientLoader,c as default};

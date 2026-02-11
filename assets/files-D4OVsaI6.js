@@ -1,1 +1,0 @@
-import{w as n,j as s}from"./chunk-EPOLDU6W-BNFkvsEM.js";const i=n(function({loaderData:e}){return s.jsxs(s.Fragment,{children:[s.jsx("h1",{children:"Files"}),s.jsx("p",{children:e})]})});export{i as default};

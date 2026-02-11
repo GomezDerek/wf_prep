@@ -1,0 +1,1 @@
+import{w as a,p as m}from"./chunk-EPOLDU6W-BovR89Y_.js";async function r({params:e}){return{name:(await new Promise(t=>t({name:e.teamId}))).name}}const s=a(function({loaderData:n}){return m.jsxs("h1",{children:["team ",n.name]})});export{r as clientLoader,s as default};

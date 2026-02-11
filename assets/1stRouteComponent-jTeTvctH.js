@@ -1,0 +1,1 @@
+import{w as o,p as t}from"./chunk-EPOLDU6W-BovR89Y_.js";const s=o(function(){return t.jsxs("div",{children:[t.jsx("h1",{children:"Look ma!"}),t.jsx("p",{children:"I'm still using React Router after like 10 years."})]})});export{s as default};
