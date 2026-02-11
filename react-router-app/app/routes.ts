@@ -8,6 +8,7 @@ export default [
     route("default-params", "routes/my-route-with-default-params.tsx"),
     route("custom-hook", "routes/custom-hook.tsx"),
     route("fetch-practice", "routes/fetch-practice.tsx"),
+    route("dog-facts", "routes/custom-hook-fetch.tsx"),
 
     //parent route
     route("dashboard", "routes/dashboard.tsx", [
