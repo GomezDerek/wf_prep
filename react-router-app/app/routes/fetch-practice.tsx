@@ -21,8 +21,6 @@ export default function FetchRoute({defaultDog="200"}) {
    *    fetch after break, and integrate custom hook
    */
 
-  // const response = await fetch("https://http.dog/", Request());
-  // const [httpDog, setHttpDog] = useState<string>(defaultDog);\
   interface Post {
     userId: string, 
     id: string, 
@@ -35,10 +33,6 @@ export default function FetchRoute({defaultDog="200"}) {
   useEffect(()=>{
     const getPost = async () => {
       try {
-        // const response = await fetch("https://http.cat/status/404");
-        // const response = await fetch("https://http.dog/200");
-        // const response = await fetch('https://corsproxy.io?' + encodeURIComponent('https://http.dog/200'));
-        
         const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
         console.log('response: ', response);
         if (!response.ok) throw new Error("Error occurred");
@@ -60,8 +54,6 @@ export default function FetchRoute({defaultDog="200"}) {
       <h1>FetchRoute</h1>
       <h2>{"title: " + post.title}</h2>
       <p>{"body: "+ post.body}</p>
-      {/* <Child text={httpDog} /> */}
-      {/* <button onClick={()=>setHttpDog(httpDog + " ")}>rerender</button> */}
     </>
   )
 }
