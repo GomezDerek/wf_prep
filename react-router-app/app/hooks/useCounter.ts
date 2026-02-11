@@ -1,13 +1,12 @@
 import { useState } from "react";
 
-// type Counter = [number, ()=>void, ()=>void];
 interface Counter {
     counter: number, 
     increment: ()=>void, 
     decrement: ()=>void
 }
 
-// arrow function 
+// arrow function version
 // export const useCounter = (count: number): Counter => {
 //         const [counter, setCounter] = useState<number>(count);
         
@@ -19,11 +18,10 @@ interface Counter {
 //             setCounter(counter+1);
 //         } 
     
-//         // return [counter, decrement, increment];
 //         return {counter, decrement, increment};
 // }
 
-//
+// function declaration version
 export function useCounter(count: number): Counter {
     const [counter, setCounter] = useState<number>(count);
     
@@ -35,6 +33,5 @@ export function useCounter(count: number): Counter {
         setCounter(counter+1);
     } 
 
-    // return [counter, decrement, increment];
     return {counter, decrement, increment};
 }
