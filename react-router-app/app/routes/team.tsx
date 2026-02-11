@@ -1,9 +1,13 @@
 // provides type safety/inference
 import type { Route } from "./+types/team";
 
-// provides 'loaderData' to the component
-export async function loader({params}: Route.LoaderArgs) {
-    // let team = await fetchTeam(params.teamId);
+// `loader` is server-side only, not allowed in SPA mode (ssr: false).
+// Use `clientLoader` instead for client-side-only builds like GitHub Pages.
+// export async function loader({params}: Route.LoaderArgs) {
+//     const team: {name: string} = await new Promise((resolve) => resolve({name: params.teamId}));
+//     return { name: team.name };
+// }
+export async function clientLoader({params}: Route.ClientLoaderArgs) {
     const team: {name: string} = await new Promise((resolve) => resolve({name: params.teamId}));
     return { name: team.name };
 }

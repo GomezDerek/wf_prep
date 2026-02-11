@@ -1,8 +1,12 @@
 // provides type safety/inference
 import type { Route } from "./+types/product";
 
-// provides 'loaderData' to the component
-export function loader({params}: Route.LoaderArgs) {
+// `loader` is server-side only, not allowed in SPA mode (ssr: false).
+// Use `clientLoader` instead for client-side-only builds like GitHub Pages.
+// export function loader({params}: Route.LoaderArgs) {
+//     return params;
+// }
+export function clientLoader({params}: Route.ClientLoaderArgs) {
     return params;
 }
 

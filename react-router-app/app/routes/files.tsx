@@ -1,8 +1,13 @@
 // provides type safety/inference
 import type { Route } from "./+types/files";
 
-// provides "loaderData" to the component
-export function loader({params}: Route.LoaderArgs) {
+// `loader` is server-side only, not allowed in SPA mode (ssr: false).
+// Use `clientLoader` instead for client-side-only builds like GitHub Pages.
+// export function loader({params}: Route.LoaderArgs) {
+//     const { "*": splat } = params;
+//     return splat;
+// }
+export function clientLoader({params}: Route.ClientLoaderArgs) {
     // params["*"] will contain the remaining URL after files/
     // You can destructure the *, you just have to assign it a new name. A common name is splat:
     const { "*": splat } = params;
