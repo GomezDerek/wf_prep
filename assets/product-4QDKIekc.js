@@ -1,0 +1,1 @@
+import{w as r,j as o}from"./chunk-EPOLDU6W-BNFkvsEM.js";const e=r(function({loaderData:t}){return o.jsxs("ul",{children:[o.jsxs("li",{children:["Category: ",t.categoryId]}),o.jsxs("li",{children:["Product Id: ",t.productId]})]})});export{e as default};
