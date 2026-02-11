@@ -5,7 +5,10 @@ export default [
     route("1stRoute", "routes/1stRouteComponent.tsx"),
     route("teams/:teamId", "routes/team.tsx"), // dynamic segments
     route("c/:categoryId/p/:productId", "routes/product.tsx"), // you can have multiple dynamic segments in one route path
-    
+    route("default-params", "routes/my-route-with-default-params.tsx"),
+    route("custom-hook", "routes/custom-hook.tsx"),
+    route("fetch-practice", "routes/fetch-practice.tsx"),
+
     //parent route
     route("dashboard", "routes/dashboard.tsx", [
     // layout("routes/dashboard.tsx", [
@@ -41,6 +44,6 @@ export default [
 
     // You can also use a splat to catch requests that don't match any route:
     route("*", "routes/catchall.tsx"), // catchall route
-    
+
 
 ] satisfies RouteConfig;
