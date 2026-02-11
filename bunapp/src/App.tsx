@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APITester } from "./APITester";
 import Page1 from '@/routes/page1';
+import Page2 from '@/routes/page2';
 import "./index.css";
 
 import logo from "./logo.svg";
@@ -13,6 +14,7 @@ export function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/page1" element={<Page1 />} />
+      <Route path="/page2" element={<Page2 />} />
     </Routes>
   )
 }
