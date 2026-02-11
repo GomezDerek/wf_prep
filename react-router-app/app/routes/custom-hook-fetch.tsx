@@ -24,7 +24,6 @@ export default function CustomHookFetchRoute() {
                 backgroundColor: '#333',
             }}
         >
-            <h1>CustomHookFetchRoute</h1>
             <button 
                 style={{
                     backgroundColor: 'white',
@@ -33,7 +32,7 @@ export default function CustomHookFetchRoute() {
                 }}
                 onClick={handleClick}
             >
-                Get Dog Fact
+                Get New Dog Fact
             </button>
             <br />
             <p>Dog fact:</p>
